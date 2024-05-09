@@ -1,53 +1,53 @@
-package ru.ixsys.freight.model;
+package ru.ixsys.logistic.model;
 
 import javafx.beans.property.*;
 
 public class Client {
-    //Declare Route Table Columns
-    private IntegerProperty route_id;
-    private StringProperty sending_address;
-    private StringProperty delivery_address;
+    //Declare Client Table Columns
+    private IntegerProperty client_id;
+    private StringProperty organization_name;
+    private StringProperty customer;
 
     //Constructor
     public Client() {
-        this.route_id = new SimpleIntegerProperty();
-        this.sending_address = new SimpleStringProperty();
-        this.delivery_address = new SimpleStringProperty();
+        this.client_id = new SimpleIntegerProperty();
+        this.organization_name = new SimpleStringProperty();
+        this.customer = new SimpleStringProperty();
     }
 
-    public int getRoute_id() {
-        return route_id.get();
+    public int getClient_id() {
+        return client_id.get();
     }
 
-    public IntegerProperty route_idProperty() {
-        return route_id;
+    public IntegerProperty client_idProperty() {
+        return client_id;
     }
 
-    public void setRoute_id(int route_id) {
-        this.route_id.set(route_id);
+    public void setClient_id(int client_id) {
+        this.client_id.set(client_id);
     }
 
-    public String getSending_address() {
-        return sending_address.get();
+    public String getOrganization_name() {
+        return organization_name.get();
     }
 
-    public StringProperty sending_addressProperty() {
-        return sending_address;
+    public StringProperty organization_nameProperty() {
+        return organization_name;
     }
 
-    public void setSending_address(String sending_address) {
-        this.sending_address.set(sending_address);
+    public void setOrganization_name(String organization_name) {
+        this.organization_name.set(organization_name);
     }
 
-    public String getDelivery_address() {
-        return delivery_address.get();
+    public String getCustomer() {
+        return customer.get();
     }
 
-    public StringProperty delivery_addressProperty() {
-        return delivery_address;
+    public StringProperty customerProperty() {
+        return customer;
     }
 
-    public void setDelivery_address(String delivery_address) {
-        this.delivery_address.set(delivery_address);
+    public void setCustomer(String customer) {
+        this.customer.set(customer);
     }
 }
