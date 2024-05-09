@@ -13,7 +13,7 @@ public class ClientDAO {
     //*******************************
     //SELECT an Client
     //*******************************
-    public static Client searchRoute (String clientId) throws SQLException, ClassNotFoundException {
+    public static Client searchClient (String clientId) throws SQLException, ClassNotFoundException {
         //Declare a SELECT statement
         String selectStmt = "SELECT * FROM clients WHERE client_id=" + clientId;
 
@@ -50,7 +50,7 @@ public class ClientDAO {
     //*******************************
     //SELECT Clients
     //*******************************
-    public static ObservableList<Client> searchRoutes () throws SQLException, ClassNotFoundException {
+    public static ObservableList<Client> searchClients () throws SQLException, ClassNotFoundException {
         //Declare a SELECT statement
         String selectStmt = "SELECT * FROM clients";
 
@@ -118,19 +118,18 @@ public class ClientDAO {
 //        }
 //    }
 //
-//    //*************************************
-//    //INSERT an route
-//    //*************************************
-//    public static void insertRoute (String sending_address, String delivery_address) throws SQLException, ClassNotFoundException {
-//        //Declare a DELETE statement
-//        String updateStmt = "INSERT INTO freight.routes (route_id, sending_address, delivery_address) VALUES\n" +
-//                        "(0, '"+sending_address+"', '"+delivery_address+"');";
-//        //Execute DELETE operation
-//        try {
-//            DBUtil.dbExecuteUpdate(updateStmt);
-//        } catch (SQLException e) {
-//            System.out.print("Error occurred while DELETE Operation: " + e);
-//            throw e;
-//        }
-//    }
+    //*************************************
+    //INSERT an client
+    //*************************************
+    public static void insertClient (String client_id, String organization_name, String customer) throws SQLException, ClassNotFoundException {
+
+        String updateStmt = "INSERT INTO logistics.clients (client_id, organization_name, customer) VALUES\n" +
+                        "('"+client_id+"', '"+organization_name+"', '"+customer+"');";
+        try {
+            DBUtil.dbExecuteUpdate(updateStmt);
+        } catch (SQLException e) {
+            System.out.print("Error occurred while DELETE Operation: " + e);
+            throw e;
+        }
+    }
 }

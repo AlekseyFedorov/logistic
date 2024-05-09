@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-
-<Pane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.ixsys.logistic.controllers.ClientsView">
+<Pane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.ixsys.logistic.controllers.ClientsController">
    <children>
-      <Label layoutX="25.0" layoutY="29.0" text="Клиенты" />
+      <TextField fx:id="clientIdText" layoutX="7.0" layoutY="32.0" promptText="ID" />
+      <TableView fx:id="clientsTable" layoutX="5.0" layoutY="72.0" prefHeight="629.0" prefWidth="1190.0">
+        <columns>
+          <TableColumn fx:id="clientIdColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="clientOrganizationName" prefWidth="545.1428756713867" text="Организация" />
+            <TableColumn fx:id="clientCustomer" prefWidth="568.2857666015625" text="Заказчик" />
+        </columns>
+      </TableView>
+      <Button fx:id="getAllClientsBtn" layoutX="1112.0" layoutY="32.0" mnemonicParsing="false" onAction="#getAllClients" text="Все записи" />
+      <Button fx:id="insertClientBtn" layoutX="857.0" layoutY="32.0" mnemonicParsing="false" onAction="#insertClient" text="Добавить" />
+      <Button layoutX="946.0" layoutY="32.0" mnemonicParsing="false" text="Изменить" />
+      <Button layoutX="1034.0" layoutY="32.0" mnemonicParsing="false" text="Удалить" />
+      <Button fx:id="searchClientBtn" layoutX="789.0" layoutY="32.0" mnemonicParsing="false" onAction="#searchClient" text="Найти" />
+      <TextField fx:id="organizationNameText" layoutX="166.0" layoutY="32.0" prefHeight="26.0" prefWidth="280.0" promptText="Организация" />
+      <Label layoutX="15.0" layoutY="12.0" text="ID" />
+      <Label layoutX="173.0" layoutY="12.0" text="Организация" />
+      <Label layoutX="463.0" layoutY="14.0" text="Заказчик" />
+      <TextField fx:id="customerText" layoutX="457.0" layoutY="32.0" prefHeight="26.0" prefWidth="280.0" promptText="Заказчик" />
    </children>
 </Pane>

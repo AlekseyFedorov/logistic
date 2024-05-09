@@ -1,4 +1,4 @@
 package ru.ixsys.logistic.controllers;
 
-public class TariffView {
+public class TariffController {
 }

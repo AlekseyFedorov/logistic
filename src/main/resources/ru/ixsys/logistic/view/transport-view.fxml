@@ -8,7 +8,7 @@
 
 <Pane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ru.ixsys.logistic.controllers.Transport"
+            fx:controller="ru.ixsys.logistic.controllers.TransportController"
             prefHeight="700.0" prefWidth="1400.0">
 
     <children>

@@ -8,7 +8,7 @@
 
 <Pane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ru.ixsys.logistic.controllers.TariffView"
+            fx:controller="ru.ixsys.logistic.controllers.TariffController"
             prefHeight="700.0" prefWidth="1200.0">
 
     <children>

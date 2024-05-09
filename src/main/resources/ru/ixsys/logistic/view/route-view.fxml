@@ -8,7 +8,7 @@
 
 <Pane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ru.ixsys.logistic.controllers.RouteView"
+            fx:controller="ru.ixsys.logistic.controllers.RouteController"
             prefHeight="700.0" prefWidth="1200.0">
     <children>
         <Label layoutX="25.0" layoutY="29.0" text="Маршруты" />
