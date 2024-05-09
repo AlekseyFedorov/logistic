@@ -10,6 +10,8 @@ module ru.ixsys.logistic {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
+    requires java.sql.rowset;
 
     opens ru.ixsys.logistic to javafx.fxml;
     exports ru.ixsys.logistic;
