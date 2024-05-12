@@ -88,36 +88,36 @@ public class ClientDAO {
         return clientList;
     }
 
-//    //*************************************
-//    //UPDATE an route
-//    //*************************************
-//    public static void updateRoute (String routeId, String sending_address, String delivery_address) throws SQLException, ClassNotFoundException {
-//        //Declare a UPDATE statement
-//        String updateStmt ="UPDATE routes SET sending_address = '" + sending_address + "', delivery_address = '" + delivery_address +"' WHERE route_id = " + routeId + ";";
-//        //Execute UPDATE operation
-//        try {
-//            DBUtil.dbExecuteUpdate(updateStmt);
-//        } catch (SQLException e) {
-//            System.out.print("Error occurred while UPDATE Operation: " + e);
-//            throw e;
-//        }
-//    }
+    //*************************************
+    //UPDATE an Client
+    //*************************************
+    public static void updateClient (String client_id, String organization_name, String customer) throws SQLException, ClassNotFoundException {
+        //Declare a UPDATE statement
+        String updateStmt ="UPDATE clients SET organization_name = '" + organization_name + "', customer = '" + customer +"' WHERE client_id = " + client_id + ";";
+        //Execute UPDATE operation
+        try {
+            DBUtil.dbExecuteUpdate(updateStmt);
+        } catch (SQLException e) {
+            System.out.print("Error occurred while UPDATE Operation: " + e);
+            throw e;
+        }
+    }
 //
 //    //*************************************
 //    //DELETE an route
 //    //*************************************
-//    public static void deleteEmpWithId (String routeId) throws SQLException, ClassNotFoundException {
-//        //Declare a DELETE statement
-//        String updateStmt = "DELETE FROM routes WHERE route_id = " + routeId +";";
-//        //Execute UPDATE operation
-//        try {
-//            DBUtil.dbExecuteUpdate(updateStmt);
-//        } catch (SQLException e) {
-//            System.out.print("Error occurred while DELETE Operation: " + e);
-//            throw e;
-//        }
-//    }
-//
+    public static void deleteClientById (String client_id) throws SQLException, ClassNotFoundException {
+        //Declare a DELETE statement
+        String updateStmt = "DELETE FROM clients WHERE client_id = " + client_id +";";
+        //Execute UPDATE operation
+        try {
+            DBUtil.dbExecuteUpdate(updateStmt);
+        } catch (SQLException e) {
+            System.out.print("Error occurred while DELETE Operation: " + e);
+            throw e;
+        }
+    }
+
     //*************************************
     //INSERT an client
     //*************************************

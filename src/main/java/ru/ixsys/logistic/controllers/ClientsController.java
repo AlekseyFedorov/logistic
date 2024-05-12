@@ -134,30 +134,30 @@ public class ClientsController {
         }
     }
 
-    //Update client's
-//    @FXML
-//    public void updateRoute(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
-//        try {
-//            RouteDAO.updateRoute(routeIdText.getText(), routeSendingAddressText.getText(), routeDeliveryAddressText.getText());
-//            System.out.println("Email has been updated for, employee id: " + routeIdText.getText() + "\n");
-//            getAllRoutes(new ActionEvent());
-//        } catch (SQLException e) {
-//            System.out.println("Problem occurred while updating email: " + e);
-//        }
-//    }
+//    Update client's
+    @FXML
+    public void updateClient(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+        try {
+            ClientDAO.updateClient(clientIdText.getText(), organizationNameText.getText(), customerText.getText());
+            System.out.println("Email has been updated for, employee id: " + clientIdText.getText() + "\n");
+            getAllClients(new ActionEvent());
+        } catch (SQLException e) {
+            System.out.println("Problem occurred while updating email: " + e);
+        }
+    }
 
-    //Delete an route with a given employee Id from DB
-//    @FXML
-//    public void deleteRoute(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
-//        try {
-//            RouteDAO.deleteEmpWithId(routeIdText.getText());
-//            System.out.println("Employee deleted! Employee id: " + routeIdText.getText() + "\n");
-//            getAllRoutes(new ActionEvent());
-//        } catch (SQLException e) {
-//            System.out.println("Problem occurred while deleting employee " + e);
-//            throw e;
-//        }
-//    }
+    //Delete an client with a given client Id from DB
+    @FXML
+    public void deleteClient(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+        try {
+            ClientDAO.deleteClientById(clientIdText.getText());
+            System.out.println("Employee deleted! Employee id: " + clientIdText.getText() + "\n");
+            getAllClients(new ActionEvent());
+        } catch (SQLException e) {
+            System.out.println("Problem occurred while deleting employee " + e);
+            throw e;
+        }
+    }
 
     //Insert an client to the DB
     @FXML
