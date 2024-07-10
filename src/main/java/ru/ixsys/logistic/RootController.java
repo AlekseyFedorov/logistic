@@ -19,8 +19,8 @@ public class RootController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             Parent fxml = FXMLLoader.load(getClass().getResource("view/clients-view.fxml"));
-            contentArea.getChildren().removeAll();
-            contentArea.getChildren().setAll(fxml);
+//            contentArea.getChildren().removeAll();
+//            contentArea.getChildren().setAll(fxml);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

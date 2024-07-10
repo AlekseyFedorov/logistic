@@ -6,13 +6,16 @@ import java.sql.*;
 public class DBUtil {
 
     private static Connection conn = null;
-    private static final String connStr = "jdbc:mysql://localhost:3306/logistics";
+//    private static final String connStr = "jdbc:mysql://localhost:3306/logistics";
+    private static final String connStr = "jdbc:postgresql://localhost:5432/logistics";
 
     //Connect to DB
     public static void dbConnect() throws SQLException, ClassNotFoundException {
         //Establish the Mysql Connection using Connection String
         try {
-            conn = DriverManager.getConnection(connStr, "root", "Ab12345678");
+//            conn = DriverManager.getConnection(connStr, "root", "Ab12345678");
+//            Class.forName("org.postgresql.Driver");
+            conn = DriverManager.getConnection(connStr, "postgres", "Ab123456");
         } catch (SQLException e) {
             System.out.println("Connection Failed! Check output console" + e);
             e.printStackTrace();
